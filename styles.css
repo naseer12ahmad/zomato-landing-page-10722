@@ -2,75 +2,75 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "poppins" sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .hero__section {
     background: url(images/heroSectionBackground.png);
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     color: white;
     min-height: 60vh;
 }
 
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 60px;
+    align-items: center;
     padding: 16px 48px;
+    height: 60px;
 }
 
 .navbar a {
     text-decoration: none;
     color: white;
+    /* font-weight: 300; */
 }
 
-.navbar__menu__container {
+.navbar__menu_container {
     display: flex;
     gap: 20px;
 }
 
-.navbar__menu__container .user__icon {
-    width: 30px;
+.user__icon {
     height: 30px;
+    width: 30px;
     border-radius: 100%;
-    border: 1px solid white;
+    border: solid 1px white;
     align-items: center;
     justify-content: center;
     display: none;
-
 }
 
-.hero__section__container {
+.hero__section_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
     height: calc(60vh - 60px);
+    gap: 32px;
 }
 
-.hero__section__logo {
-    width: 220px;
+.hero__section_logo {
+    width: 250px;
     height: auto;
 }
 
-.hero__section__title {
-    font-size: 30px;
+.hero__section_title {
     text-align: center;
+    font-size: 30px;
     font-weight: 400;
 }
 
-.hero__section__input__conatainer {
-    background-color: white;
+.hero__section_input_container {
+    background: white;
     padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    gap: 10px;
-    width: 50%;
     border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
 
 .input_container_location,
@@ -80,22 +80,22 @@
     outline: none;
 }
 
+.input_container_search {
+    width: 70%;
+}
+
 .input_container_location {
-    width: 35%;
+    width: 30%;
     border-right: 2px solid #e0e0e0;
 }
 
-.input_container_search {
-    width: 65%;
-}
-
 @media only screen and (max-width: 600px) {
-    .navbar__menu__container .user__icon {
-        display: flex;
+    .navbar__menu_container .link {
+        display: none;
     }
 
-    .link {
-        display: none;
+    .user__icon {
+        display: flex;
     }
 
     .navbar {
@@ -106,7 +106,7 @@
         min-height: 80vh;
     }
 
-    .hero__section__input__conatainer {
+    .hero__section_input_container {
         flex-direction: column;
         background-color: transparent;
         width: 100%;
@@ -116,80 +116,76 @@
     .input_container_search {
         padding: 15px;
         border-radius: 10px;
-        width: 95%;
+        width: 90%;
     }
 
-    .hero__section__container {
-        height: calc(60vh - 60px);
+    .hero__section_container {
+        height: calc(80vh - 60px);
     }
 
-    .hero__section__title {
-        font-size: 20px;
-        width: 95%;
+    .input_container_location {
+        border-right: none;
     }
 }
 
 .container {
-    margin: 3rem auto;
+    margin: 48px auto;
     width: 80%;
 }
 
 .we__offer {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 16px;
     align-items: center;
     justify-content: center;
 }
 
-.we__offer__card {
+.we__offer .card {
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid #e0e0e0;
-    transition: all 0.3s ease;
+    transition: all 300ms ease-out;
 }
 
-.we__offer__card:hover {
-    transform: scale(1.05);
-}
-
-.we__offer__card img {
+.we__offer .card img {
     width: 100%;
-    height: 160px;
+    height: 150px;
     object-fit: cover;
     object-position: center;
 }
 
-.we__offer__content {
-    padding: 10px;
-}
-
-.we__offer__content h2 {
-    font-size: 15px;
+.we__offer .card h2 {
+    padding: 10px 10px 0 10px;
+    font-size: 20px;
     font-weight: 400;
 }
 
-.we__offer__content p {
-    font-size: 12px;
+.we__offer .card p {
+    font-size: 13px;
+    padding: 0 10px 15px 10px;
+}
+
+.we__offer .card:hover {
+    transform: scale(1.05);
 }
 
 .collections h1 {
-    font-weight: 600;
+    font-weight: 400;
 }
 
-.collections .sub__heading__container {
+.collections .sub__heading_container {
     font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 16px;
 }
 
-.sub__heading__container span:nth-child(2) {
-    color: rgb(243, 72, 72);
+.sub__heading_container span:nth-child(2) {
+    color: #ff7e8b;
     font-size: 13px;
-    cursor: pointer;
 }
 
 .collections_card_container {
@@ -197,8 +193,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
+    gap: 16px;
+    margin-top: 24px;
 }
 
 .collections_card_container .card {
@@ -227,16 +223,16 @@
 }
 
 .overlay {
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.05) 50%,
+            rgba(0, 0, 0, 0.05) 85%);
     width: 100%;
     height: 100%;
-    position: absolute;
+    display: absolute;
     top: 0;
     left: 0;
     border-radius: 10px;
-    background: linear-gradient(0deg,
-            rgba(0, 0, 0, 0.9) 0%,
-            rgba(0, 0, 0, 0.5) 50%,
-            rgba(0, 0, 0, 0.05) 85%);
 }
 
 .collections_card_container .card .content {
@@ -245,85 +241,80 @@
     left: 0;
     color: white;
     padding: 12px 16px;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
 
 .content h4 {
     font-weight: 400;
-    letter-spacing: 0.5px;
 }
 
-.get_the_app {
+.get__the_app {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(255, 251, 247);
     width: 100%;
-    padding: 3rem 6rem;
+    padding: 48px 48px;
 }
 
-.get_the_app .semiContainer {
+.get__the_app .semiContainer {
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 24px;
 }
 
-.get_the_app .semiContainer .left {
+.get__the_app .semiContainer .left {
     flex: 2;
 }
 
-.get_the_app .semiContainer .left img {
+.get__the_app .semiContainer .left img {
     width: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
-.get_the_app .semiContainer .right {
+.get__the_app .semiContainer .right {
     flex: 3;
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .right h1 {
-    font-weight: 400;
-    font-size: 2rem;
+    font-weight: 500;
+    font-size: 32px;
 }
 
 .right p {
-    font-size: 0.8rem;
+    font-size: 14px;
 }
 
-.semiContainer .right .radio_button_container {
+.semiContainer .right .radio__buttons_container {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 16px;
 }
 
-.semiContainer .right .radio_button_container div {
+.semiContainer .right .radio__buttons_container div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
 
-.right .radio_button_container div input {
+.semiContainer .right .radio__buttons_container div input {
     height: 15px;
     width: 15px;
-    accent-color: rgb(212, 82, 82);
+    accent-color: rgb(239, 79, 95);
 }
 
 .semiContainer .right .input_container {
     display: flex;
-    gap: 0.5rem;
-}
-
-.input_container {
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 .input_container button,
@@ -332,7 +323,6 @@
 }
 
 .input_container input {
-    flex: auto;
     border: 1.5px solid gray;
     outline: none;
     border-radius: 5px;
@@ -341,66 +331,65 @@
 
 .input_container button {
     border: none;
-    background-color: rgb(239, 24, 24);
+    background-color: rgb(239, 79, 95);
     color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.right .download_app_container {
+.right .download__app_container {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
 }
 
-.download_app_container h5 {
+.download__app_container h5 {
     font-weight: 400;
     color: gray;
 }
 
-.download_app_container div {
+.download__app_container div {
     display: flex;
-    gap: 1rem;
+    gap: 16px;
 }
 
-.download_app_container div img {
+.download__app_container div img {
     width: 35%;
 }
 
 @media only screen and (max-width: 1300px) {
-
-    .get_the_app .semiContainer .left,
-    .get_the_app .semiContainer .right {
+    .get__the_app .semiContainer .left {
         flex: 1;
     }
 
-    .get_the_app .semiContainer {
-        width: 80%;
+    .get__the_app .semiContainer .right {
+        flex: 1;
     }
 
+    .get__the_app .semiContainer {
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 900px) {
-    .get_the_app {
+    .get__the_app {
         padding: 2rem;
     }
 
-    .get_the_app .semiContainer {
+    .get__the_app .semiContainer {
         width: 90%;
     }
-
 }
 
 @media only screen and (max-width: 700px) {
-    .get_the_app {
-        padding: 2rem 0;
+    .get__the_app {
+        padding: 3rem 0;
     }
 
-    .get_the_app .semiContainer {
+    .get__the_app .semiContainer {
         width: 80%;
         flex-direction: column;
     }
-
 }
 
 .footer {
@@ -413,39 +402,37 @@
     justify-content: space-between;
     width: 90%;
     margin: auto;
-    flex-wrap: wrap;
-    gap: 2.5rem;
 }
 
 .footer_section1 img {
     width: 120px;
+    height: auto;
 }
 
-.section1_buttonContainer {
+.section1__buttonContainer {
     display: flex;
-    gap: 1rem;
+    gap: 16px;
 }
 
-.section1_buttonContainer button {
-    padding: 5px 5px;
+.section1__buttonContainer button {
+    padding: 5px;
     width: 90px;
     border: 1px solid gray;
     background-color: transparent;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     cursor: pointer;
 }
 
 .navigation_container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     width: 90%;
     margin: auto;
+
+    /* grid-template-columns:  1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(5, 1fr);
+
     gap: 1rem;
-    padding: 1rem 0;
+    padding: 48px 0;
 }
 
 .link__container {
@@ -456,9 +443,9 @@
 
 .link__container h5 {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 5px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
 }
 
 .footer__link {
@@ -466,6 +453,7 @@
     color: gray;
     font-size: 13px;
     font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .footer__link:hover {
@@ -484,33 +472,31 @@
     height: 25px;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
+    justify-content: center;
 }
 
 .social__links_container button i {
     color: white;
-    font: 13px;
+    font-size: 13px;
 }
 
-.footer__section_logos {
+.footer__store_logos {
     width: 100%;
 }
 
-.disclamer {
+.footer .disclamer {
     width: 90%;
     margin: auto;
-    color: gray;
+    padding: 20px 0;
     font-size: 12px;
+    color: gray;
     border-top: 1px solid gray;
-    padding-top: 1.5rem;
-
 }
 
 @media only screen and (max-width: 900px) {
     .navigation_container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -521,6 +507,12 @@
 }
 
 @media only screen and (max-width: 450px) {
+    .footer_section1 {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
     .navigation_container {
         grid-template-columns: 1fr;
     }
